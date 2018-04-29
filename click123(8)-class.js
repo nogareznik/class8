@@ -309,19 +309,14 @@ p.nominalBounds = new cjs.Rectangle(-49.9,-29.1,98,42.8);
 		
 		function clickRed() {
 			showAll();
-			if (self.btn.btn_txt.text == "hide") {
-				//self.r1.visible = false;
-				//self.r2.visible = false;
-				//self.r3.visible = false;
-				//self.r4.visible = false;
-				//self.r5.visible = false;
-				//self.r6.visible = false;
-		
-				for (i = 1; i <= 6; i++) {
-					self.getChildByName("r" + i).visible = false;
-				}
-		
-			} else { //אחרת - כלומר לא אחד, לא שתיים ולכן האופצייה הנותרת שנשארה היא שלוש
+			if (self.btn.btn_txt.text == "hide") { // מצב הסתרה
+				self.r1.visible = false;
+				self.r2.visible = false;
+				self.r3.visible = false;
+				self.r4.visible = false;
+				self.r5.visible = false;
+				self.r6.visible = false;
+			} else { // מצב שקיפות
 				self.r1.alpha = 0.5;
 				self.r2.alpha = 0.5;
 				self.r3.alpha = 0.5;
@@ -339,7 +334,7 @@ p.nominalBounds = new cjs.Rectangle(-49.9,-29.1,98,42.8);
 				self.y3.visible = false;
 				self.y4.visible = false;
 				self.y5.visible = false;
-			} else {
+			} else { // מצב שקיפות
 				self.y1.alpha = 0.5;
 				self.y2.alpha = 0.5;
 				self.y3.alpha = 0.5;
@@ -357,7 +352,7 @@ p.nominalBounds = new cjs.Rectangle(-49.9,-29.1,98,42.8);
 				self.g4.gotoAndPlay(1);
 				self.g5.gotoAndPlay(1);
 				self.g6.gotoAndPlay(1);
-			} else { //אחרת - כלומר לא אחד, לא שתיים ולכן האופצייה הנותרת שנשארה היא שלוש
+			} else { // מצב שקיפות
 				self.g1.alpha = 0.5;
 				self.g2.alpha = 0.5;
 				self.g3.alpha = 0.5;
